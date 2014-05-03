@@ -2,7 +2,6 @@ package nl.openweb.hippo.components;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
 import nl.openweb.hippo.componentsinfo.GeneralListInfo;
 import nl.openweb.hippo.componentsinfo.PageableListInfo;
@@ -15,8 +14,8 @@ import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
 import org.hippoecm.hst.content.beans.query.filter.Filter;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstComponentException;
-import org.hippoecm.hst.core.request.HstRequestContext;
 import org.hippoecm.hst.core.component.HstRequest;
+import org.hippoecm.hst.core.request.HstRequestContext;
 import org.hippoecm.hst.util.SearchInputParsingUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
