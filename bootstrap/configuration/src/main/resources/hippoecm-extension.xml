@@ -815,5 +815,47 @@
     <sv:property sv:name="hippo:sequence" sv:type="Double"> 
       <sv:value>33001.7</sv:value> 
     </sv:property> 
-  </sv:node> 
+  </sv:node>  
+  <sv:node sv:name="angular-hippo-hst-hst-hst-configurations-angularhippo-hst-abstractpages-jsonPage"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>30072.0</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>hst/configurations/angularhippo/abstractpages/jsonPage.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hst:hst/hst:configurations/angularhippo/hst:abstractpages</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  <sv:node sv:name="angular-hippo-hst-hst-hst-configurations-angularhippo-hst-pages-news"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>30076.0</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>hst/configurations/angularhippo/pages/news.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hst:hst/hst:configurations/angularhippo/hst:pages</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  <sv:node sv:name="angular-hippo-hst-hst-hst-configurations-angularhippo-hst-pages-text">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:initializeitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:sequence" sv:type="Double">
+      <sv:value>30076.0</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentresource" sv:type="String">
+      <sv:value>hst/configurations/angularhippo/pages/text.xml</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentroot" sv:type="String">
+      <sv:value>/hst:hst/hst:configurations/angularhippo/hst:pages</sv:value>
+    </sv:property>
+  </sv:node>
 </sv:node>

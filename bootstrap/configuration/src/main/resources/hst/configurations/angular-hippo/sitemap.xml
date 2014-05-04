@@ -15,7 +15,13 @@
       <sv:value>hst:sitemapitem</sv:value>
     </sv:property>
     <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-      <sv:value>hst:pages/jsonPage</sv:value>
+      <sv:value>hst:pages/news</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
+      <sv:value>angularhippo:textdocument</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
+      <sv:value>hst:pages/text</sv:value>
     </sv:property>
     <sv:property sv:name="hst:relativecontentpath" sv:type="String">
       <sv:value>${1}</sv:value>

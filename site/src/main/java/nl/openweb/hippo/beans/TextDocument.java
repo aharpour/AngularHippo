@@ -2,20 +2,38 @@ package nl.openweb.hippo.beans;
 
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoHtml;
+import org.hippoecm.hst.core.component.HstRequest;
 
-@Node(jcrType="angularhippo:textdocument")
-public class TextDocument extends BaseDocument{
-    
-    public String getTitle() {
-        return getProperty("angularhippo:title");
-    }
+import com.google.gson.annotations.Expose;
 
-    public String getSummary() {
-        return getProperty("angularhippo:summary");
-    }
-    
-    public HippoHtml getHtml(){
-        return getHippoHtml("angularhippo:body");    
-    }
+@Node(jcrType = "angularhippo:textdocument")
+public class TextDocument extends BaseDocument implements LoadInterface {
 
+	@Expose
+	private String title;
+	@Expose
+	private String summary;
+	@Expose
+	private String html;
+
+	public void load(HstRequest request) {
+		this.title = getProperty("angularhippo:title");
+		this.summary = getProperty("angularhippo:summary");
+		HippoHtml hippoHtml = getHippoHtml("angularhippo:body");
+		if (hippoHtml != null) {
+			html = hippoHtml.getContent();
+		}
+	}
+
+	public String getTitle() {
+		return this.title;
+	}
+
+	public String getSummary() {
+		return this.summary;
+	}
+
+	public String getHtml() {
+		return html;
+	}
 }

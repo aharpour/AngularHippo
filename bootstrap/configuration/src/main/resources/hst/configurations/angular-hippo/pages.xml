@@ -2,12 +2,4 @@
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hst:pages</sv:value>
   </sv:property>
-  <sv:node sv:name="jsonPage">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hst:component</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:componentclassname" sv:type="String">
-      <sv:value>nl.openweb.hippo.components.JSONComponent</sv:value>
-    </sv:property>
-  </sv:node>
 </sv:node>
