@@ -52,6 +52,7 @@
     <sv:value>.JPG</sv:value>
     <sv:value>.png</sv:value>
     <sv:value>.PNG</sv:value>
+    <sv:value>.html</sv:value>
   </sv:property>
   <sv:property sv:name="hst:versioninpreviewheader" sv:type="Boolean">
     <sv:value>true</sv:value>
