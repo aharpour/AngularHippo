@@ -1,19 +1,22 @@
 'use strict';
 
 /* Controllers */
-function PagesController($scope, $http, $route, $routeParams, $compile) {
-    $route.current.templateUrl = 'templates/' + $routeParams.name + ".html";
-    
-    $http.get($route.current.templateUrl).then(function (msg) {
-        $('#views').html($compile(msg.data)($scope));
-    });
-}
-PagesController.$inject = ['$scope', '$http', '$route', '$routeParams', '$compile'];
 
-function MyCtrl1() {}
-MyCtrl1.$inject = [];
+angular.module('myApp.controllers', [])
+  .controller('MyCtrl1', ['$scope', function($scope) {
 
+  }])
+  .controller('MyCtrl2', ['$scope', function($scope) {
 
-function MyCtrl2() {
-}
-MyCtrl2.$inject = [];
+  }])
+    .controller('ArticleCtrl', ['$scope', '$location', '$http', function($scope, $location, $http) {
+    	  $http.get('/site'+$location.path()).
+    	    success(function(data, status, headers, config) {
+    	      $scope.templateUrl = data.template.substr(1);
+    	      $scope.content = data;
+    	    }).
+    	    error(function(data, status, headers, config) {
+    	      // log error
+    	    });	
+}])
+;

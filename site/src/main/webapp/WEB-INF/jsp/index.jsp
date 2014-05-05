@@ -14,14 +14,14 @@
 
   <div id="views" ng-view></div>
 
-  <div>Angular seed app: v<span app-version></span></div>
-
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
   -->
   
   <script src="<hst:link path="/js/lib/jquery/jquery.min.js"/>"></script>
   <script src="<hst:link path="/js/lib/angular/angular.js"/>"></script>
+  <script src="<hst:link path="/js/lib/angular/angular-route.js"/>"></script>
+  <script src="<hst:link path="/js/lib/angular/angular-resource.js"/>"></script>  
   <script src="<hst:link path="/js/app.js"/>"></script>
   <script src="<hst:link path="/js/services.js"/>"></script>
   <script src="<hst:link path="/js/controllers.js"/>"></script>
