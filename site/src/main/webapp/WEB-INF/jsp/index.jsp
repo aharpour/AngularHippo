@@ -8,8 +8,11 @@
 </head>
 <body>
   <ul class="menu">
-    <li><a href="#/partial1">partial1</a></li>
-    <li><a href="#/partial2">partial2</a></li>
+    <li><a href="#/common/homepage">Home</a></li>
+    <li><a href="#/common/about-us">About us</a></li>
+    <li><a href="#/news/2011/toyota-suggests-putting-a-glass-of-water-on-your-dash">Toyota</a></li>
+    <li><a href="#/news/2011/solar-power-the-sky-is-the-limit">Solar power</a></li>
+    <li><a href="#/news/2011/pbs-show-asserts-greenhouse-gases-atmospheric-pollutants-dimming-future">Atmospheric pollutants</a></li>
   </ul>
 
   <div id="views" ng-view></div>

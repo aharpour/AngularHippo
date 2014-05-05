@@ -4,7 +4,7 @@
 angular.module('myApp',
 		[ 'myApp.filters', 'myApp.services', 'myApp.directives', 'myApp.controllers' ]).config(
 		[ '$routeProvider', function($routeProvider) {
-			$routeProvider.when('/', {
+			$routeProvider.when('#/common/homepage', {
 				templateUrl : 'templates/blank.html'
 			});
 			$routeProvider.when('/:sub1', {
@@ -20,6 +20,6 @@ angular.module('myApp',
 				template : '<article ng-include="templateUrl"></article>'
 			});
 			$routeProvider.otherwise({
-				redriectTo : '/'
+				redriectTo : '#/common/homepage'
 			});
 		} ]);
