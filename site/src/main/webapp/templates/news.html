@@ -1,20 +1,24 @@
 
-<div id="main">
-	<div id="content">
 
-		<div class="textpage">
-			<div class="container">
-				<div class="page-header">
-					<h1>{{content.document.title}}</h1>
-				</div>
-				<p>{{content.document.summary}}</p>
-				<div class="image">
-					<img src="{{content.document.image}}" />
-				</div>
-				<div class="text">
-					<div id="styling_example">{{content.document.html}}</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<div class="container">
+  <div class="span8">
+    <article class="well well-large">
+        <header>
+          <h2>{{content.document.title}}</h2>
+          <p class="badge badge-info">
+            {{content.document.formatedDate}}
+          </p>
+          <p>{{content.document.summary}}</p>
+        </header>
+        
+        <div id="styling_example">{{content.document.html}}</div>
+        
+        <figure>
+          <img  src="{{content.document.image}}" 
+                title="{{content.document.imageFileName}}" 
+                alt="{{content.document.imageFileName}}"/>
+          <figcaption>{{content.document.imageDescription}}</figcaption>
+        </figure>     
+      </article>
+  </div>
 </div>
