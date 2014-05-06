@@ -3,6 +3,7 @@ package nl.openweb.hippo.beans;
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoHtml;
 import org.hippoecm.hst.core.component.HstRequest;
+import org.jsoup.Jsoup;
 
 import com.google.gson.annotations.Expose;
 
@@ -15,13 +16,25 @@ public class TextDocument extends BaseDocument implements LoadInterface {
 	private String summary;
 	@Expose
 	private String html;
-
+	
 	public void load(HstRequest request) {
 		this.title = getProperty("angularhippo:title");
 		this.summary = getProperty("angularhippo:summary");
 		HippoHtml hippoHtml = getHippoHtml("angularhippo:body");
 		if (hippoHtml != null) {
 			html = hippoHtml.getContent();
+			
+			//TODO: return a string processed like the hst:html tag does by 
+			//using its rewriter !! 
+			
+			// OK but still this does not produce the desired result.  
+			//see http://localhost:8080/site/#/common/about-us 
+			
+//			ContentRewriter<String> contentRewriter = new SimpleContentRewriter();
+//			contentRewriter.setFullyQualifiedLinks(true);
+//			html = contentRewriter.rewrite(hippoHtml.getContent(), hippoHtml.getNode(), request.getRequestContext());          
+			
+			html = Jsoup.parse(html).text();
 		}
 	}
 
