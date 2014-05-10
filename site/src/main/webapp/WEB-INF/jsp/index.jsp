@@ -60,6 +60,7 @@
   <script src="<hst:link path="/js/lib/angular/angular.js"/>"></script>
   <script src="<hst:link path="/js/lib/angular/angular-route.js"/>"></script>
   <script src="<hst:link path="/js/lib/angular/angular-resource.js"/>"></script>  
+  <script src="<hst:link path="/js/lib/angular/angular-sanitize.js"/>"></script>  
   <script src="<hst:link path="/js/app.js"/>"></script>
   <script src="<hst:link path="/js/services.js"/>"></script>
   <script src="<hst:link path="/js/controllers.js"/>"></script>

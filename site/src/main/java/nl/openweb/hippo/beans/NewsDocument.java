@@ -6,10 +6,11 @@ import java.util.Calendar;
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoGalleryImageSetBean;
 import org.hippoecm.hst.content.beans.standard.HippoHtml;
+import org.hippoecm.hst.content.rewriter.ContentRewriter;
+import org.hippoecm.hst.content.rewriter.impl.SimpleContentRewriter;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.linking.HstLink;
 import org.hippoecm.hst.core.request.HstRequestContext;
-import org.jsoup.Jsoup;
 
 import com.google.gson.annotations.Expose;
 
@@ -50,17 +51,10 @@ public class NewsDocument extends BaseDocument implements LoadInterface {
 		if (hippoHtml != null) {
 			html = hippoHtml.getContent();
 			
-			//TODO: return a string processed like the hst:html tag does by 
-			//using its rewriter !! 
+			ContentRewriter<String> contentRewriter = new SimpleContentRewriter();
+			contentRewriter.setFullyQualifiedLinks(true);
+			html = contentRewriter.rewrite(hippoHtml.getContent(), hippoHtml.getNode(), request.getRequestContext());          
 			
-			// OK but still this does not produce the desired result.  
-			//see http://localhost:8080/site/#/common/about-us 
-			
-//			ContentRewriter<String> contentRewriter = new SimpleContentRewriter();
-//			contentRewriter.setFullyQualifiedLinks(true);
-//			html = contentRewriter.rewrite(hippoHtml.getContent(), hippoHtml.getNode(), request.getRequestContext());          
-			
-			html = Jsoup.parse(html).text();
 		}
 		
 		HippoGalleryImageSetBean imageSetBean = getLinkedBean("angularhippo:image",	HippoGalleryImageSetBean.class);
