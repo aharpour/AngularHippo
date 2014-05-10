@@ -12,8 +12,8 @@ angular.module('myApp.controllers', [])
     .controller('ArticleCtrl', ['$scope', '$location', '$http', function($scope, $location, $http) {
     	  $http.get('/site'+$location.path()).
     	    success(function(data, status, headers, config) {
-    	      $scope.templateUrl = data.template.substr(1);
-    	      $scope.content = data;
+    	      $scope.templateUrl = data.config.template;
+    	      $scope.content = data.model;
     	    }).
     	    error(function(data, status, headers, config) {
     	      // log error
