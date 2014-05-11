@@ -3,17 +3,13 @@
 /* Controllers */
 
 angular.module('myApp.controllers', [])
-  .controller('MyCtrl1', ['$scope', function($scope) {
-
-  }])
-  .controller('MyCtrl2', ['$scope', function($scope) {
-
-  }])
-    .controller('ArticleCtrl', ['$scope', '$location', '$http', function($scope, $location, $http) {
-    	  $http.get('/site'+$location.path()).
+    .controller('BaseCtrl', ['$scope', '$location', '$http', function($scope, $location, $http) {
+    	  $http.get(contextPath + $location.path()).
     	    success(function(data, status, headers, config) {
-    	      $scope.templateUrl = data.config.template;
     	      $scope.content = data.model;
+    	      $scope.config = data.config;
+    	      $scope.children = data.children;
+    	      
     	    }).
     	    error(function(data, status, headers, config) {
     	      // log error
