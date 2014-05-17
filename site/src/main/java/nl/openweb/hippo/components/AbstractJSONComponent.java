@@ -28,7 +28,7 @@ public abstract class AbstractJSONComponent extends BaseHstComponent {
 
     private HstComponentConfig getHstComponentConfiguration(HstRequest request) {
         HstComponentConfig result = new HstComponentConfig();
-        result.setTemplate(getComponentConfiguration().getRenderPath());
+        result.setTemplate("/web/" + getComponentConfiguration().getRenderPath());
         Map<String, String> componentParameters = new HashMap<String, String>(getComponentParameters());
         result.setController(componentParameters.remove(PARAM_ANGULAR_CONTROLLER));
         result.setParamters(componentParameters);

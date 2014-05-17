@@ -211,6 +211,7 @@
         <module>bootstrap</module>
         <module>cms</module>
         <module>site</module>
+        <module>web</module>
       </modules>
     </profile>
 
@@ -256,6 +257,13 @@
                   <type>war</type>
                   <properties>
                     <context>/site</context>
+                  </properties>
+                </deployable>
+				<deployable>
+                  <location>${project.basedir}/web/target/web.war</location>
+                  <type>war</type>
+                  <properties>
+                    <context>/web</context>
                   </properties>
                 </deployable>
               </deployables>
@@ -307,7 +315,5 @@
         </plugins>
       </build>
     </profile>
-
   </profiles>
-
 </project>
